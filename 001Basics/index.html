@@ -2,25 +2,50 @@
 <html>
 <head>
 <title>爱</title>
-<style type="text/css">
+    <style type="text/css">
 	body{background-image: url("./images/1.gif");
-         background-size:50% 50%;
+         background-size:100% 100%;
          height:100%;
 	       }
     html{height:100%}
     @keyframes myfirst {
-        from {opacity:0;}
-        to {opacity:0.8;}
+        0%  {opacity:0;}
+        75%  {opacity:0;}
+        90%  {opacity:100;}
+        95%  {opacity:0;}
     }
-    h1,p{
-        animation: myfirst 4s infinite;
+    @keyframes mysecond {
+        0%  {opacity:0;}
+        95%  {opacity:0;}
+        99%  {opacity:100;}
+        100%  {opacity:0;}
     }
+    h1{
+        font-size: 100px;
+        text-align: center;
+        width: 100%;
+        color: aqua;
+    }
+    p{
+        font-size: 50px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        color: chartreuse;
+    }
+    #句1{
+        animation: myfirst 40s infinite;
+    }
+    #句2{
+        animation: mysecond 40s infinite;
+        }
 </style>
 </head>
 <body>
-<audio src="./music/兄弟，别来无恙.mp3" controls="controls">
+<audio src="./music/兄弟，别来无恙.mp3" controls="controls" autoplay="autoplay" loop="loop">
 </audio>
-<h1>1二</h1>
-<p>2018.9.1。。</p>
+<h1>兄弟，别来无恙</h1>
+<p id="句1">一杯敬岁月 一杯敬沧桑</p>
+<p id="句2">我们都披星戴月的各路奔忙</p>
 </body>
 </html>
