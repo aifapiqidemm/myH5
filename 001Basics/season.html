@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>四季变化</title>
     <link rel="Stylesheet" type="text/css" href="CSS/season.css" />
+    <script>
+        function audioAutoPlay(id){
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+                audio.play();
+            }, false);
+        }
+    </script>
 </head>
 <body>
 <audio src="./music/中央气象台天气预报.mp3" autoplay="autoplay" loop="loop">
